@@ -13,4 +13,6 @@ public class RobotMap {
 
     public static final int RIGHT_BACK_MASTER_ID = 27;
     public static final int RIGHT_BACK_SLAVE_ID = 29;
+
+    public static final int SPARK_MAX_ID = 0;
 }
