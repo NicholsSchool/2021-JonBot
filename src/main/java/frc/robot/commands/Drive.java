@@ -7,8 +7,6 @@
 
 package frc.robot.commands;
 
-import com.ctre.phoenix.Util;
-
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 
@@ -17,6 +15,7 @@ public class Drive extends CommandBase {
    * Creates a new Drive.
    */
   public Drive() {
+
     addRequirements(RobotContainer.driveTrain);
     // Use addRequirements() here to declare subsystem dependencies.
   }
@@ -30,17 +29,20 @@ public class Drive extends CommandBase {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
+
     RobotContainer.driveTrain.move(RobotContainer.j0.getY(), RobotContainer.j1.getY());
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
+
   }
 
   // Returns true when the command should end.
   @Override
   public boolean isFinished() {
+    
     return false;
   }
 }

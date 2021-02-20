@@ -13,7 +13,6 @@ import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.RobotContainer;
 import frc.robot.RobotMap;
 
 public class DriveTrain extends SubsystemBase {
@@ -60,11 +59,12 @@ public class DriveTrain extends SubsystemBase {
 
   @Override
   public void periodic() {
+
     // This method will be called once per scheduler run
   }
 
-  public void move(double leftSpeed, double rightSpeed)
-  {
+  public void move(double leftSpeed, double rightSpeed) {
+    
     drive.tankDrive(leftSpeed, rightSpeed);
   }
 }

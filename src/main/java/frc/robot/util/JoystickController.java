@@ -3,10 +3,9 @@ package frc.robot.util;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 
-public class JoystickController extends Joystick
- {
-    public JoystickController(int port)
-    {
+public class JoystickController extends Joystick {
+    public JoystickController(int port) {
+        
         super(port);
         b1 = new JoystickButton(this, 1);
         b2 = new JoystickButton(this, 2);
@@ -22,17 +21,16 @@ public class JoystickController extends Joystick
         b12 = new JoystickButton(this, 12);
     }
 
-
     public JoystickButton b1;
-	public JoystickButton b2;
-	public JoystickButton b3;
-	public JoystickButton b4; 
-	public JoystickButton b5; 
-	public JoystickButton b6;
-	public JoystickButton b7;
-	public JoystickButton b8;
-	public JoystickButton b9;
-    public JoystickButton b10; 
+    public JoystickButton b2;
+    public JoystickButton b3;
+    public JoystickButton b4;
+    public JoystickButton b5;
+    public JoystickButton b6;
+    public JoystickButton b7;
+    public JoystickButton b8;
+    public JoystickButton b9;
+    public JoystickButton b10;
     public JoystickButton b11;
     public JoystickButton b12;
 }
