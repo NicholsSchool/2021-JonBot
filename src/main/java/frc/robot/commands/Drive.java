@@ -16,7 +16,7 @@ public class Drive extends CommandBase {
    */
   public Drive() {
 
-    addRequirements(RobotContainer.driveTrain);
+    // addRequirements(RobotContainer.driveTrain);
     // Use addRequirements() here to declare subsystem dependencies.
   }
 
@@ -30,7 +30,7 @@ public class Drive extends CommandBase {
   @Override
   public void execute() {
 
-    RobotContainer.driveTrain.move(RobotContainer.j0.getY(), RobotContainer.j1.getY());
+    // RobotContainer.driveTrain.move(RobotContainer.j0.getY(), RobotContainer.j1.getY());
   }
 
   // Called once the command ends or is interrupted.

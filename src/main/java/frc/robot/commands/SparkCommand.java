@@ -5,7 +5,7 @@ import frc.robot.RobotContainer;
 
 public class SparkCommand extends CommandBase {
 	/**
-	 * Creates a new SparkGo.
+	 * Creates a new SparkCommand.
 	 */
 	public SparkCommand() {
 

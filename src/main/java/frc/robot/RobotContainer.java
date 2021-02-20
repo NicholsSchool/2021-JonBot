@@ -7,15 +7,13 @@
 
 package frc.robot;
 
-import com.revrobotics.CANSparkMax;
-import com.revrobotics.CANSparkMaxLowLevel.MotorType;
-
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.commands.Drive;
 import frc.robot.commands.SparkCommand;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.SparkSubsystem;
+import frc.robot.subsystems.TalonSubsystem;
 import frc.robot.util.JoystickController;
 
 /**
@@ -28,8 +26,9 @@ import frc.robot.util.JoystickController;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
 
-  public static DriveTrain driveTrain;
+  // public static DriveTrain driveTrain;
   public static SparkSubsystem spark;
+  public static TalonSubsystem talon;
 
   public static JoystickController j0;
   public static JoystickController j1;
@@ -40,8 +39,9 @@ public class RobotContainer {
   public RobotContainer() {
 
     // Configure the button bindings
-    driveTrain = new DriveTrain();
+    // driveTrain = new DriveTrain();
     spark = new SparkSubsystem();
+    talon = new TalonSubsystem();
 
     configureButtonBindings();
   }
@@ -57,9 +57,7 @@ public class RobotContainer {
     j0 = new JoystickController(0);
     j1 = new JoystickController(1);
 
-    driveTrain.setDefaultCommand(new Drive());
-
-    j1.b1.whileHeld(new SparkCommand());
+    // driveTrain.setDefaultCommand(new Drive());
   }
 
   /**
@@ -68,7 +66,7 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    
+
     // An ExampleCommand will run in autonomous
     return null;
   }
